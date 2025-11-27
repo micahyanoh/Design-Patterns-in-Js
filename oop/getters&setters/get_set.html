@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+class Square{
+    constructor(_width){
+        this.width = _width;
+        this.requests = 0;
+
+    }
+
+    // create getter
+    get area (){
+        this.requests++;
+        return this.width * this.width;
+    }
+    // create setter
+    set area (area){
+        this.width = Math.sqrt(area);
+    }
+}
+
+let sq = new Square (5);
+console.log(sq.area);  
+
+
+sq.area = 100;
+console.log(sq.width);
+
+for( let i=0;i<=5;i++){
+console.log(sq.area);
+
+}
+console.log(sq.requests);
+
+
+
+</script>
+</html>

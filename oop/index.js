@@ -85,3 +85,4 @@ class Programmer extends Person {
 
 const dev=new Programmer("Alice", 30, "TechCorp","JavaScript");
 console.log(dev.sayHi());
+
