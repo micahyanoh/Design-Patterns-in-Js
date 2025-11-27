@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+// Static Methods, also known as helper methods, 
+// are called without instantiating their class 
+// and cannot be called through a class instance.
+
+class Square{
+    constructor(_width){
+        this.width = _width;
+    }
+
+    // static method
+    static equals (a,b){
+        return a.width === b.width;
+    }
+}
+let sq1 = new Square (5);
+let sq2 = new Square (10);
+
+console.log(Square.equals(sq1,sq2));  
+ 
+</script>
+</html>
