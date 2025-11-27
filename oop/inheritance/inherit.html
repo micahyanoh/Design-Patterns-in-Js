@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    class Person {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+
+        }
+        describe() {
+            console.log(`My name is ${this.name} and I am ${this.age} years old.`);
+        }
+    }
+
+    class Programmer extends Person {
+        constructor(name, age, language) {
+            super(name, age);
+            this.language = language;
+        }
+
+        code() {
+            super.describe()
+            console.log(`I code in ${this.language}.`);
+        }
+    }
+    let kitty = new Person("Kitty", 15);
+    let alice = new Programmer("Alice", 30, "JavaScript");
+    kitty.describe();
+    alice.code();
+
+    function Hire(programmers) {
+        //using of....
+        /*for (i of programmers) {
+            i.code();
+        }*/
+        // use forEach
+        /*programmers.forEach(i => i.code()); */
+        // use for loop
+
+        for (let i = 0; i < programmers.length; i++) {
+            programmers[i].code();
+        }
+    }
+
+    hr = [
+        new Programmer("Bob", 25, "Python"),
+        new Programmer("Eve", 28, "Java"),
+        new Programmer("Mallory", 35, "C++")
+    ]
+    Hire(hr);
+</script>
+
+</html>
