@@ -61,3 +61,27 @@ essential features of the object.
     For example, a bank account class may have a private balance attribute that can only be modified through deposit and withdraw methods,
      ensuring that the balance cannot be changed arbitrarily from outside the class.
 */
+
+
+// Inheritance
+
+/* 
+➡️ creating a new class (subclass) that inherits properties and methods from an existing class (superclass).
+ This allows for code reuse and the creation of hierarchical relationships between classes.
+  For example, a Dog class may inherit
+*/
+
+
+class Programmer extends Person {
+    constructor(name, age, company,Language) {
+        super(name, age); // Call the constructor of the Person class
+        this.company = company;
+        this.Language=Language;
+    }
+    sayHi=() =>{
+        return `Hi, I'm ${this.getName()}, a programmer working at ${this.company}.`;
+    }
+}
+
+const dev=new Programmer("Alice", 30, "TechCorp","JavaScript");
+console.log(dev.sayHi());
