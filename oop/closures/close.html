@@ -10,11 +10,23 @@
         //enable strict
         "use strict"
         function Patient(id, name, address, bloodGroup){
+            //accessible globally
+            //attached to a patient instance
             this.id =id;
             this.name = name;
 
+            //restricted - private variables
             var _address = address;
             var bloodGroup = bloodGroup;
+
+            this.printDetails = function(){
+                `The patient's details are:
+                Id: ${this.id}
+                Patient Name: ${this.name},
+                Blood Group: ${_bloodGroup},
+                Home: ${_address}
+                `
+            }
 
         }
     </script>
