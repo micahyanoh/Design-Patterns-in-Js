@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    class Animal {
+        constructor(name) {
+            this.name = name;
+        }
+        makeSound() {
+            console.log("Some generic sound");
+        }
+    }
+
+    class Dog extends Animal {
+        constructor(name) {
+            super(name);
+        }
+        makeSound() {
+            console.log("Woof!! Woof!!");
+        }
+    }
+
+    a1 = new Animal("mimi");
+    a2 = new Dog("Buddy");
+    a1.makeSound();
+    a2.makeSound();
+</script>
+
+</html>
