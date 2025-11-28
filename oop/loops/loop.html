@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Student {
+            constructor(name) {
+                this.name = name
+            }
+
+            describe() {
+                console.log(`My name is ${this.name}`)
+            }
+        }
+
+        class Grade {
+            constructor(students) {
+                this.students = students
+            }
+
+            population() {
+                console.log(`We have a population of ${this.students.length} Students`);
+                console.log(`They include:`)
+
+                //normal loops
+                for (let i = 0; i < this.students.length; i++) {
+
+                    console.log(this.students[i].name);
+                }
+
+                // using for each
+                this.students.forEach(element => {
+                    console.log(`${element.name} is in Grade 4`)
+
+                });
+
+                //using for ...of 
+
+                for (const std of this.students) {
+                    console.log(`${std.name} will graduate this year`)
+                }
+            }
+        }
+        const alf = new Student("Alf");
+        const ray = new Student("Ray");
+        const bev = new Student("Bev");
+        const nel = new Student("Nel");
+
+        const g1 = new Grade([alf, ray, bev, nel])
+        g1.population()
+    </script>
+</body>
+
+</html>
