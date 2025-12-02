@@ -35,6 +35,25 @@
         let vegatabes = ["onions","spinach","kales","cabbage"];
         let groceries = [...fruits, ...vegatabes, "eggs", "milk"];
         console.log(groceries)
+
+        // using it to pass args to a fx
+
+        function sum(x,y,z){
+            console.log(x+y+z);
+        }
+
+        let nums =[10,20,30];
+
+        sum(...nums);
+
+        // REST operator
+        // make an fx accept multiple arguements
+
+        function Product(multiplier, ...args){
+            args.forEach(i=>console.log(i*multiplier));
+        }// ...args acts as the spread operator -> collects the arguements into an array called args, opposite of spread
+
+        Product(10,2,3,4);
     </script>
 </body>
 </html>
