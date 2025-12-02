@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         //enable strict
         "use strict"
-        function Patient(id, name, address, bloodGroup){
+        function Patient(id, name, address, bloodGroup) {
             //accessible globally
             //attached to a patient instance
-            this.id =id;
+            this.id = id;
             this.name = name;
 
             //restricted - private variables
             var _address = address;
-            var bloodGroup = bloodGroup;
+            var _bloodGroup = bloodGroup;
 
-            this.printDetails = function(){
+            this.printDetails = function () {
                 `The patient's details are:
                 Id: ${this.id}
                 Patient Name: ${this.name},
@@ -29,6 +31,9 @@
             }
 
         }
+        const p1= new Patient(12,"Alf","181-40111","O")
+        console.log(p1)
     </script>
 </body>
+
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // allow an iterable like strin/ array to be upacked into individual elements
+        // let's say....
+        const numbers =[1,2,3,4,5,6,7,8,9,10]
+        // and we want to find the max value using 'math.max',
+        // we can't pass an array to the fx but....
+        const maximum = Math.max(...numbers);
+        const minumum = Math.min(...numbers);
+        console.log(maximum);
+        console.log(minumum);
+        //let's make it more fun
+        // using strings
+
+        let name = "ALFONCE MICAH YANO";
+        let letters = [...name];
+        console.log(letters);
+        letters.forEach(function(letter){console.log(letter)});
+    </script>
+</body>
+</html>
