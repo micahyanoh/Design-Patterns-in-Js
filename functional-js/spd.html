@@ -20,9 +20,21 @@
         // using strings
 
         let name = "ALFONCE MICAH YANO";
+        let lett = [...name].join("-");
         let letters = [...name];
-        console.log(letters);
+        console.log(lett);
         letters.forEach(function(letter){console.log(letter)});
+
+        // using spraed to make a shallow copy
+        // a similar copy of items
+        let fruits =["mango","apple","banana","orange"];
+        let fruitx=[...fruits];
+        console.log(fruitx);
+        // adding two arrays
+
+        let vegatabes = ["onions","spinach","kales","cabbage"];
+        let groceries = [...fruits, ...vegatabes, "eggs", "milk"];
+        console.log(groceries)
     </script>
 </body>
 </html>
