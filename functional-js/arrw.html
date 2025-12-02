@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const sayHello = function(){
+            console.log("Hello");
+        }
+
+        //convert it to an arrow fn
+        const sayHello2 = ()=>console.log("Hello");
+
+        sayHello();
+        sayHello();
+
+        setTimeout(function(){
+            console.log('aLF wAS hERE')
+        },5000)// this is a callback fn
+
+        // converting to arrow fn
+        setTimeout(()=>console.log('wHO wAS hERE'),4000)
+
+        // YOU CAN NOT HAVE A NAMED ARROW FN, ARROW FNS ARE ALWAYS UNNONYMOUS
+
+
+    </script>
+</body>
+</html>
