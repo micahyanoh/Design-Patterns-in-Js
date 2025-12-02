@@ -14,6 +14,11 @@
 
         // using compose
         // defining a compose fx
+        function compose(...fns){
+            return function(val){
+               return fns.reduceRight((prev,fn) => fn(prev),val)
+            }
+        }
        // const compose = function(...fns);
         const newres= compose(prod10,sub1,add2)(5);
         console.log(res);
