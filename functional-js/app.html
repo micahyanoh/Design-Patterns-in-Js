@@ -19,10 +19,14 @@
                return fns.reduceRight((prev,fn) => fn(prev),val)
             }
         }
+        // REWRITING THE FN ABOVE
+        const composex= (...fns) => val => fns.reduceRight((prev,fn)=>fn(prev),val);
        // const compose = function(...fns);
         const newres= compose(prod10,sub1,add2)(5);
+        const newresx=composex(prod10,sub1,add2)(5);
         console.log(res);
         console.log(newres);
+        console.log(newresx);
     </script>
 </body>
 </html>
